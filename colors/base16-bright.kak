@@ -1,73 +1,84 @@
 ## base16-kakoune (https://github.com/leira/base16-kakoune)
 ## by Leira Hua
-## Bright scheme by Chris Kempson (http:&#x2F;&#x2F;chriskempson.com)
+## Bright scheme by Chris Kempson (http://chriskempson.com)
 
-%sh{
-    base00='rgb:000000'
-    base01='rgb:303030'
-    base02='rgb:505050'
-    base03='rgb:b0b0b0'
-    base04='rgb:d0d0d0'
-    base05='rgb:e0e0e0'
-    base06='rgb:f5f5f5'
-    base07='rgb:ffffff'
-    base08='rgb:fb0120'
-    base09='rgb:fc6d24'
-    base0A='rgb:fda331'
-    base0B='rgb:a1c659'
-    base0C='rgb:76c7b7'
-    base0D='rgb:6fb3d2'
-    base0E='rgb:d381c3'
-    base0F='rgb:be643c'
-
-    ## code
-    echo "
-        face value ${base09}
-        face type ${base0A}+b
-        face identifier ${base08}
-        face string ${base0B}
-        face keyword ${base0E}+b
-        face operator ${base05}
-        face attribute ${base0C}
-        face comment ${base03}
-        face meta ${base0D}
-        face builtin ${base0D}+b
-    "
-
-    ## markup
-    echo "
-        face title ${base0D}+b
-        face header ${base0D}+b
-        face bold ${base0A}+b
-        face italic ${base0E}
-        face mono ${base0B}
-        face block ${base0C}
-        face link ${base09}
-        face bullet ${base08}
-        face list ${base08}
-    "
-
-    ## builtin
-    echo "
-        face Default ${base05},${base00}
-        face PrimarySelection ${base06},${base0D}
-        face SecondarySelection ${base06},${base0F}
-        face PrimaryCursor ${base00},${base05}
-        face SecondaryCursor ${base06},${base0C}
-        face LineNumbers ${base02},${base00}
-        face LineNumberCursor ${base0A},${base00}
-        face MenuForeground ${base00},${base0D}
-        face MenuBackground ${base00},${base0C}
-        face MenuInfo ${base02}
-        face Information ${base00},${base0A}
-        face Error ${base00},${base08}
-        face StatusLine ${base04},${base01}
-        face StatusLineMode ${base0B}
-        face StatusLineInfo ${base0D}
-        face StatusLineValue ${base0C}
-        face StatusCursor ${base00},${base05}
-        face Prompt ${base0D},${base01}
-        face MatchingChar ${base06},${base02}+b
-        face BufferPadding ${base03},${base00}
-    "
+try %{
+    decl str base00
+    decl str base01
+    decl str base02
+    decl str base03
+    decl str base04
+    decl str base05
+    decl str base06
+    decl str base07
+    decl str base08
+    decl str base09
+    decl str base0A
+    decl str base0B
+    decl str base0C
+    decl str base0D
+    decl str base0E
+    decl str base0F
 }
+
+set global base00 rgb:000000
+set global base01 rgb:303030
+set global base02 rgb:505050
+set global base03 rgb:b0b0b0
+set global base04 rgb:d0d0d0
+set global base05 rgb:e0e0e0
+set global base06 rgb:f5f5f5
+set global base07 rgb:ffffff
+set global base08 rgb:fb0120
+set global base09 rgb:fc6d24
+set global base0A rgb:fda331
+set global base0B rgb:a1c659
+set global base0C rgb:76c7b7
+set global base0D rgb:6fb3d2
+set global base0E rgb:d381c3
+set global base0F rgb:be643c
+
+## code
+face value              "%opt{base09},%opt{base00}"
+face type               "%opt{base0A},%opt{base00}"
+face identifier         "%opt{base08},%opt{base00}"
+face string             "%opt{base0B},%opt{base00}"
+face keyword            "%opt{base0E},%opt{base00}"
+face operator           "%opt{base05},%opt{base00}"
+face attribute          "%opt{base0C},%opt{base00}"
+face comment            "%opt{base0C},%opt{base00}"
+face meta               "%opt{base0D},%opt{base00}"
+face builtin            "%opt{base0D},%opt{base00}+b"
+
+## markup
+face title              "%opt{base0D},%opt{base00}+b"
+face header             "%opt{base0D},%opt{base00}+b"
+face bold               "%opt{base0A},%opt{base00}+b"
+face italic             "%opt{base0E},%opt{base00}"
+face mono               "%opt{base0B},%opt{base00}"
+face block              "%opt{base0C},%opt{base00}"
+face link               "%opt{base09},%opt{base00}"
+face bullet             "%opt{base08},%opt{base00}"
+face list               "%opt{base08},%opt{base00}"
+
+## builtin
+face Default            "%opt{base05},%opt{base00}"
+face PrimaryCursor      "%opt{base00},%opt{base0E}"
+face PrimarySelection   "%opt{base00},%opt{base0C}"
+face SecondaryCursor    "%opt{base00},%opt{base05}"
+face SecondarySelection "%opt{base00},%opt{base04}"
+face LineNumbers        "%opt{base02},%opt{base00}"
+face LineNumberCursor   "%opt{base0A},%opt{base00}"
+face MenuForeground     "%opt{base00},%opt{base0D}"
+face MenuBackground     "%opt{base00},%opt{base0C}"
+face MenuInfo           "%opt{base02},%opt{base0C}"
+face Information        "%opt{base00},%opt{base0A}"
+face Error              "%opt{base00},%opt{base08}"
+face StatusLine         "%opt{base04},%opt{base01}"
+face StatusLineMode     "%opt{base0B},%opt{base01}"
+face StatusLineInfo     "%opt{base0D},%opt{base01}"
+face StatusLineValue    "%opt{base0C},%opt{base01}"
+face StatusCursor       "%opt{base00},%opt{base05}"
+face Prompt             "%opt{base0D},%opt{base01}"
+face MatchingChar       "%opt{base06},%opt{base02}+b"
+face BufferPadding      "%opt{base03},%opt{base00}"
