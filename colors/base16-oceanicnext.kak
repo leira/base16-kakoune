@@ -1,73 +1,73 @@
 ## base16-kakoune (https://github.com/leira/base16-kakoune)
 ## by Leira Hua
-## OceanicNext scheme by https:&#x2F;&#x2F;github.com&#x2F;voronianski&#x2F;oceanic-next-color-scheme
+## OceanicNext scheme by https://github.com/voronianski/oceanic-next-color-scheme
 
-%sh{
-    base00='rgb:1B2B34'
-    base01='rgb:343D46'
-    base02='rgb:4F5B66'
-    base03='rgb:65737E'
-    base04='rgb:A7ADBA'
-    base05='rgb:C0C5CE'
-    base06='rgb:CDD3DE'
-    base07='rgb:D8DEE9'
-    base08='rgb:EC5f67'
-    base09='rgb:F99157'
-    base0A='rgb:FAC863'
-    base0B='rgb:99C794'
-    base0C='rgb:5FB3B3'
-    base0D='rgb:6699CC'
-    base0E='rgb:C594C5'
-    base0F='rgb:AB7967'
+evaluate-commands %sh{
+    base00='rgb:1b2b34'
+    base01='rgb:343d46'
+    base02='rgb:4f5b66'
+    base03='rgb:65737e'
+    base04='rgb:a7adba'
+    base05='rgb:c0c5ce'
+    base06='rgb:cdd3de'
+    base07='rgb:d8dee9'
+    base08='rgb:ec5f67'
+    base09='rgb:f99157'
+    base0A='rgb:fac863'
+    base0B='rgb:99c794'
+    base0C='rgb:5fb3b3'
+    base0D='rgb:6699cc'
+    base0E='rgb:c594c5'
+    base0F='rgb:ab7967'
 
     ## code
     echo "
-        face value ${base09}
-        face type ${base0A}+b
-        face identifier ${base08}
-        face string ${base0B}
-        face keyword ${base0E}+b
-        face operator ${base05}
-        face attribute ${base0C}
-        face comment ${base03}
-        face meta ${base0D}
-        face builtin ${base0D}+b
+        set-face global value ${base09}
+        set-face global type ${base0A}+b
+        set-face global identifier ${base08}
+        set-face global string ${base0B}
+        set-face global keyword ${base0E}+b
+        set-face global operator ${base05}
+        set-face global attribute ${base0C}
+        set-face global comment ${base03}
+        set-face global meta ${base0D}
+        set-face global builtin ${base0D}+b
     "
 
     ## markup
     echo "
-        face title ${base0D}+b
-        face header ${base0D}+b
-        face bold ${base0A}+b
-        face italic ${base0E}
-        face mono ${base0B}
-        face block ${base0C}
-        face link ${base09}
-        face bullet ${base08}
-        face list ${base08}
+        set-face global title ${base0D}+b
+        set-face global header ${base0D}+b
+        set-face global bold ${base0A}+b
+        set-face global italic ${base0E}
+        set-face global mono ${base0B}
+        set-face global block ${base0C}
+        set-face global link ${base09}
+        set-face global bullet ${base08}
+        set-face global list ${base08}
     "
 
     ## builtin
     echo "
-        face Default ${base05},${base00}
-        face PrimarySelection ${base06},${base0D}
-        face SecondarySelection ${base06},${base0F}
-        face PrimaryCursor ${base00},${base05}
-        face SecondaryCursor ${base06},${base0C}
-        face LineNumbers ${base02},${base00}
-        face LineNumberCursor ${base0A},${base00}
-        face MenuForeground ${base00},${base0D}
-        face MenuBackground ${base00},${base0C}
-        face MenuInfo ${base02}
-        face Information ${base00},${base0A}
-        face Error ${base00},${base08}
-        face StatusLine ${base04},${base01}
-        face StatusLineMode ${base0B}
-        face StatusLineInfo ${base0D}
-        face StatusLineValue ${base0C}
-        face StatusCursor ${base00},${base05}
-        face Prompt ${base0D},${base01}
-        face MatchingChar ${base06},${base02}+b
-        face BufferPadding ${base03},${base00}
+        set-face global Default ${base05},${base00}
+        set-face global PrimarySelection ${base06},${base0D}
+        set-face global SecondarySelection ${base06},${base0F}
+        set-face global PrimaryCursor ${base00},${base05}
+        set-face global SecondaryCursor ${base06},${base0C}
+        set-face global LineNumbers ${base02},${base00}
+        set-face global LineNumberCursor ${base0A},${base00}
+        set-face global MenuForeground ${base00},${base0D}
+        set-face global MenuBackground ${base00},${base0C}
+        set-face global MenuInfo ${base02}
+        set-face global Information ${base00},${base0A}
+        set-face global Error ${base00},${base08}
+        set-face global StatusLine ${base04},${base01}
+        set-face global StatusLineMode ${base0B}
+        set-face global StatusLineInfo ${base0D}
+        set-face global StatusLineValue ${base0C}
+        set-face global StatusCursor ${base00},${base05}
+        set-face global Prompt ${base0D},${base01}
+        set-face global MatchingChar ${base06},${base02}+b
+        set-face global BufferPadding ${base03},${base00}
     "
 }
